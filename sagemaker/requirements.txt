@@ -1,0 +1,22 @@
+# SageMaker inference container dependencies
+# These are installed inside the SageMaker container at startup.
+# The base DLC already includes torch, transformers, numpy, etc.
+
+# NLP dependencies
+spacy>=3.5.0
+nltk>=3.8
+
+# spaCy model (downloaded separately in setup script)
+# python -m spacy download en_core_web_sm
+
+# Transformers / HuggingFace
+transformers>=4.30.0
+huggingface_hub>=0.16.0
+sentencepiece>=0.1.99
+
+# SageMaker inference toolkit
+sagemaker-inference>=1.5.0
+
+# Web framework (for local testing only, SageMaker uses MMS)
+flask>=2.0.0
+markupsafe>=2.0.0
