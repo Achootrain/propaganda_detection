@@ -73,24 +73,6 @@ python optimize_models.py --model-dir ../model --validate
 | `test_local.py` | Local handler testing |
 | `optimize_models.py` | FP16 validation, ONNX export, benchmarking |
 
-## Instance Recommendations
-
-| Instance | GPU | VRAM | Cost/hr | Recommended For |
-|---|---|---|---|---|
-| `ml.g4dn.xlarge` | T4 | 16GB | ~$0.73 | Development / low traffic |
-| `ml.g5.xlarge` | A10G | 24GB | ~$1.41 | Production |
-| `ml.m5.xlarge` | None | - | ~$0.23 | Budget (CPU, ~10x slower) |
-
-## Environment Variables
-
-| Variable | Default | Description |
-|---|---|---|
-| `SPAN_BACKBONE` | `roberta-large` | Span model backbone |
-| `TC_BACKBONE` | `roberta-large` | TC model backbone |
-| `SPAN_PROB_THRESHOLD` | `0.7` | Span detection threshold |
-| `TORCH_COMPILE_MODE` | `reduce-overhead` | torch.compile mode |
-| `DISABLE_TORCH_COMPILE` | `false` | Disable torch.compile |
-| `SAGEMAKER_ROLE_ARN` | - | IAM role for SageMaker |
 
 ## API
 
